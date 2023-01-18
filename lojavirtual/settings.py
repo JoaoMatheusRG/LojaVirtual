@@ -81,6 +81,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'USER':'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3000'
     }
 }
 
@@ -136,12 +140,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'upload')
 MEDIA_URL = '/upload/'
 
 TEMPLATE_DIRS = (
-os.path.join(BASE_DIR, 'main/templates'),
+    os.path.join(BASE_DIR, 'templates'),
 )
 
 TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [TEMPLATE_DIRS],
+    'DIRS': TEMPLATE_DIRS,
     'APP_DIRS': True,
     'OPTIONS':{
         'context_processors': [

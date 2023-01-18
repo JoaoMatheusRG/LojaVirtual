@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from django.views.generic.edit import FormView
+from main import forms
 
-# Create your views here.
-def HomePage(request):
-    return render("templates/home.html", {})
+class ViewFaleConosco(FormView):
+    template_name = "fale_conosco.html"
+    form_class = forms.FormFaleConosco
+    success_url = "/"
