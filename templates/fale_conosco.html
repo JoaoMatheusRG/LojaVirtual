@@ -2,7 +2,7 @@
 <h2>Fale conosco</h2>
 <p>Envie-nos uma mensagem, que teremos todo o prazer em atendê-lo(a).</p>
 <form method="POST">
-	{% csrf_token %} {{ form }}
+	{% csrf_token %} {{ form.as_p }}
 	<button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 {% endblock conteudo %}
